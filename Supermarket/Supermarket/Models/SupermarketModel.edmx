@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="SupermarketModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="SupermarketModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Category">
           <Key>
             <PropertyRef Name="CatID" />
@@ -98,7 +98,7 @@ warning 6002: The table/view 'Supermarket.dbo.OderDetails' does not have a prima
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Orders__CusID__412EB0B6">
+        <Association Name="FK__Orders__CusID__47DBAE45">
           <End Role="Customers" Type="Self.Customers" Multiplicity="0..1" />
           <End Role="Orders" Type="Self.Orders" Multiplicity="*" />
           <ReferentialConstraint>
@@ -110,7 +110,7 @@ warning 6002: The table/view 'Supermarket.dbo.OderDetails' does not have a prima
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Products__CatID__4222D4EF">
+        <Association Name="FK__Products__CatID__48CFD27E">
           <End Role="Category" Type="Self.Category" Multiplicity="0..1" />
           <End Role="Products" Type="Self.Products" Multiplicity="*" />
           <ReferentialConstraint>
@@ -122,7 +122,7 @@ warning 6002: The table/view 'Supermarket.dbo.OderDetails' does not have a prima
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Products__SupID__4316F928">
+        <Association Name="FK__Products__SupID__49C3F6B7">
           <End Role="Suppliers" Type="Self.Suppliers" Multiplicity="0..1" />
           <End Role="Products" Type="Self.Products" Multiplicity="*" />
           <ReferentialConstraint>
@@ -157,21 +157,20 @@ warning 6002: The table/view 'Supermarket.dbo.OderDetails' does not have a prima
             <End Role="Products" EntitySet="Products" />
             <End Role="OderDetails" EntitySet="OderDetails" />
           </AssociationSet>
-          <AssociationSet Name="FK__Orders__CusID__412EB0B6" Association="Self.FK__Orders__CusID__412EB0B6">
+          <AssociationSet Name="FK__Orders__CusID__47DBAE45" Association="Self.FK__Orders__CusID__47DBAE45">
             <End Role="Customers" EntitySet="Customers" />
             <End Role="Orders" EntitySet="Orders" />
           </AssociationSet>
-          <AssociationSet Name="FK__Products__CatID__4222D4EF" Association="Self.FK__Products__CatID__4222D4EF">
+          <AssociationSet Name="FK__Products__CatID__48CFD27E" Association="Self.FK__Products__CatID__48CFD27E">
             <End Role="Category" EntitySet="Category" />
             <End Role="Products" EntitySet="Products" />
           </AssociationSet>
-          <AssociationSet Name="FK__Products__SupID__4316F928" Association="Self.FK__Products__SupID__4316F928">
+          <AssociationSet Name="FK__Products__SupID__49C3F6B7" Association="Self.FK__Products__SupID__49C3F6B7">
             <End Role="Suppliers" EntitySet="Suppliers" />
             <End Role="Products" EntitySet="Products" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="SupermarketModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">

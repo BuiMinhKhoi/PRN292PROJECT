@@ -20,9 +20,11 @@ namespace Supermarket.Controllers
 
             string searchString = id;
             var products = db.Products.Include(p => p.Category).Include(p => p.Supplier);
+            products = products.Where(s => s.Status.Equals("0"));
             if (!string.IsNullOrEmpty(searchString))
             {
                 products = products.Where(s => s.ProName.Contains(searchString));
+                
             }
             return View(products.ToList());
             //var products = db.Products.Include(p => p.Category).Include(p => p.Supplier);
