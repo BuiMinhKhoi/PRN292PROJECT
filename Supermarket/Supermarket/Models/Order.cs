@@ -21,9 +21,9 @@ namespace Supermarket.Models
         }
     
         public string OrderID { get; set; }
-        public System.DateTime OrderDate { get; set; }
-        public System.DateTime RequiredDate { get; set; }
-        public System.DateTime ShippedDate { get; set; }
+        public Nullable<System.DateTime> OrderDate { get; set; }
+        public Nullable<System.DateTime> RequiredDate { get; set; }
+        public Nullable<System.DateTime> ShippedDate { get; set; }
         public string ShipVia { get; set; }
         public string ShipAddress { get; set; }
         public string CusID { get; set; }

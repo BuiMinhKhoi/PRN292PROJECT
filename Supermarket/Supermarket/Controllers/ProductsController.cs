@@ -15,10 +15,18 @@ namespace Supermarket.Controllers
         private SupermarketEntities db = new SupermarketEntities();
 
         // GET: Products
-        public ActionResult Index()
+        public ActionResult Index(string id)
         {
+
+            string searchString = id;
             var products = db.Products.Include(p => p.Category).Include(p => p.Supplier);
+            if (!string.IsNullOrEmpty(searchString))
+            {
+                products = products.Where(s => s.ProName.Contains(searchString));
+            }
             return View(products.ToList());
+            //var products = db.Products.Include(p => p.Category).Include(p => p.Supplier);
+            //return View(products.ToList());
         }
 
         // GET: Products/Details/5
@@ -132,5 +140,6 @@ namespace Supermarket.Controllers
             }
             base.Dispose(disposing);
         }
+
     }
 }

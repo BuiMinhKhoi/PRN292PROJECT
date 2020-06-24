@@ -1,13 +1,19 @@
 ﻿@model IEnumerable<Supermarket.Models.Supplier>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Suppliers";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
+    <h2>Suppliers</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
+    @using (Html.BeginForm("Index", "Suppliers", FormMethod.Get)){
+        <p>
+            Supplier Name: @Html.TextBox("id") <input type="submit" value="Search"/>
+        </p>
+    }
 </p>
 <table class="table">
     <tr>

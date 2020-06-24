@@ -23,7 +23,7 @@ namespace Supermarket.Models
         public string SupID { get; set; }
         public string SupName { get; set; }
         public string Address { get; set; }
-        public int PhoneNo { get; set; }
+        public Nullable<int> PhoneNo { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Product> Products { get; set; }

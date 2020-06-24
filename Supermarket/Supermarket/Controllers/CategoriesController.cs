@@ -15,9 +15,16 @@ namespace Supermarket.Controllers
         private SupermarketEntities db = new SupermarketEntities();
 
         // GET: Categories
-        public ActionResult Index()
+        public ActionResult Index(string id)
         {
-            return View(db.Categories.ToList());
+            string searchString = id;
+            var categories = db.Categories.ToList();
+            if (!string.IsNullOrEmpty(searchString))
+            {
+                var categories2 = categories.Where(c => c.CatName.Contains(searchString)).ToList();
+                categories = categories2.ToList();
+            }
+            return View(categories.ToList());
         }
 
         // GET: Categories/Details/5

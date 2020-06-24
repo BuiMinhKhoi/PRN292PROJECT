@@ -7,31 +7,31 @@
     <Property Name="CatID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="CatName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Description" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-    <NavigationProperty Name="Products" Relationship="Self.FK__Products__CatID__3F466844" FromRole="Category" ToRole="Products" />
+    <NavigationProperty Name="Products" Relationship="Self.FK__Products__CatID__4222D4EF" FromRole="Category" ToRole="Products" />
   </EntityType>
   <EntityType Name="Customer">
     <Key>
       <PropertyRef Name="CusID" />
     </Key>
     <Property Name="CusID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="Address" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="PhoneNo" Type="Int32" Nullable="false" />
-    <Property Name="CusName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-    <NavigationProperty Name="Orders" Relationship="Self.FK__Orders__CusID__38996AB5" FromRole="Customers" ToRole="Orders" />
+    <Property Name="Address" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="PhoneNo" Type="String" MaxLength="24" FixedLength="false" Unicode="true" />
+    <Property Name="CusName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Orders" Relationship="Self.FK__Orders__CusID__412EB0B6" FromRole="Customers" ToRole="Orders" />
   </EntityType>
   <EntityType Name="Order">
     <Key>
       <PropertyRef Name="OrderID" />
     </Key>
     <Property Name="OrderID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="OrderDate" Type="DateTime" Nullable="false" Precision="0" />
-    <Property Name="RequiredDate" Type="DateTime" Nullable="false" Precision="0" />
-    <Property Name="ShippedDate" Type="DateTime" Nullable="false" Precision="0" />
-    <Property Name="ShipVia" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="ShipAddress" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="CusID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <NavigationProperty Name="Customer" Relationship="Self.FK__Orders__CusID__38996AB5" FromRole="Orders" ToRole="Customers" />
-    <NavigationProperty Name="OderDetails" Relationship="Self.FK__OderDetai__Order__4222D4EF" FromRole="Orders" ToRole="OderDetails" />
+    <Property Name="OrderDate" Type="DateTime" Precision="3" />
+    <Property Name="RequiredDate" Type="DateTime" Precision="3" />
+    <Property Name="ShippedDate" Type="DateTime" Precision="3" />
+    <Property Name="ShipVia" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ShipAddress" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="CusID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Customer" Relationship="Self.FK__Orders__CusID__412EB0B6" FromRole="Orders" ToRole="Customers" />
+    <NavigationProperty Name="OderDetails" Relationship="Self.FK__OderDetai__Order__3F466844" FromRole="Orders" ToRole="OderDetails" />
   </EntityType>
   <EntityType Name="Product">
     <Key>
@@ -39,27 +39,27 @@
     </Key>
     <Property Name="ProID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="ProName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="QuantityPerUnit" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="UnitPrice" Type="Double" Nullable="false" />
-    <Property Name="UnitInStock" Type="Int32" Nullable="false" />
-    <Property Name="UnitOnOrder" Type="Int32" Nullable="false" />
-    <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="Image" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="CatID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="SupID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <NavigationProperty Name="Category" Relationship="Self.FK__Products__CatID__3F466844" FromRole="Products" ToRole="Category" />
-    <NavigationProperty Name="OderDetails" Relationship="Self.FK__OderDetai__ProID__4316F928" FromRole="Products" ToRole="OderDetails" />
-    <NavigationProperty Name="Supplier" Relationship="Self.FK__Products__SupID__403A8C7D" FromRole="Products" ToRole="Suppliers" />
+    <Property Name="QuantityPerUnit" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UnitPrice" Type="Double" />
+    <Property Name="UnitInStock" Type="Int32" />
+    <Property Name="UnitOnOrder" Type="Int32" />
+    <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Image" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="CatID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SupID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Category" Relationship="Self.FK__Products__CatID__4222D4EF" FromRole="Products" ToRole="Category" />
+    <NavigationProperty Name="OderDetails" Relationship="Self.FK__OderDetai__ProID__403A8C7D" FromRole="Products" ToRole="OderDetails" />
+    <NavigationProperty Name="Supplier" Relationship="Self.FK__Products__SupID__4316F928" FromRole="Products" ToRole="Suppliers" />
   </EntityType>
   <EntityType Name="Supplier">
     <Key>
       <PropertyRef Name="SupID" />
     </Key>
     <Property Name="SupID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="SupName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="Address" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="PhoneNo" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="Products" Relationship="Self.FK__Products__SupID__403A8C7D" FromRole="Suppliers" ToRole="Products" />
+    <Property Name="SupName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Address" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="PhoneNo" Type="Int32" />
+    <NavigationProperty Name="Products" Relationship="Self.FK__Products__SupID__4316F928" FromRole="Suppliers" ToRole="Products" />
   </EntityType>
   <EntityType Name="OderDetail">
     <Key>
@@ -74,11 +74,11 @@
     <Property Name="Discount" Type="Double" Nullable="false" />
     <Property Name="OrderID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="ProID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <NavigationProperty Name="Order" Relationship="Self.FK__OderDetai__Order__4222D4EF" FromRole="OderDetails" ToRole="Orders" />
-    <NavigationProperty Name="Product" Relationship="Self.FK__OderDetai__ProID__4316F928" FromRole="OderDetails" ToRole="Products" />
+    <NavigationProperty Name="Order" Relationship="Self.FK__OderDetai__Order__3F466844" FromRole="OderDetails" ToRole="Orders" />
+    <NavigationProperty Name="Product" Relationship="Self.FK__OderDetai__ProID__403A8C7D" FromRole="OderDetails" ToRole="Products" />
   </EntityType>
-  <Association Name="FK__Products__CatID__3F466844">
-    <End Role="Category" Type="Self.Category" Multiplicity="1" />
+  <Association Name="FK__Products__CatID__4222D4EF">
+    <End Role="Category" Type="Self.Category" Multiplicity="0..1" />
     <End Role="Products" Type="Self.Product" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Category">
@@ -89,8 +89,8 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Orders__CusID__38996AB5">
-    <End Role="Customers" Type="Self.Customer" Multiplicity="1" />
+  <Association Name="FK__Orders__CusID__412EB0B6">
+    <End Role="Customers" Type="Self.Customer" Multiplicity="0..1" />
     <End Role="Orders" Type="Self.Order" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Customers">
@@ -101,7 +101,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__OderDetai__Order__4222D4EF">
+  <Association Name="FK__OderDetai__Order__3F466844">
     <End Role="Orders" Type="Self.Order" Multiplicity="1" />
     <End Role="OderDetails" Type="Self.OderDetail" Multiplicity="*" />
     <ReferentialConstraint>
@@ -113,7 +113,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__OderDetai__ProID__4316F928">
+  <Association Name="FK__OderDetai__ProID__403A8C7D">
     <End Role="Products" Type="Self.Product" Multiplicity="1" />
     <End Role="OderDetails" Type="Self.OderDetail" Multiplicity="*" />
     <ReferentialConstraint>
@@ -125,8 +125,8 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Products__SupID__403A8C7D">
-    <End Role="Suppliers" Type="Self.Supplier" Multiplicity="1" />
+  <Association Name="FK__Products__SupID__4316F928">
+    <End Role="Suppliers" Type="Self.Supplier" Multiplicity="0..1" />
     <End Role="Products" Type="Self.Product" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Suppliers">
@@ -144,23 +144,23 @@
     <EntitySet Name="Products" EntityType="Self.Product" />
     <EntitySet Name="Suppliers" EntityType="Self.Supplier" />
     <EntitySet Name="OderDetails" EntityType="Self.OderDetail" />
-    <AssociationSet Name="FK__Products__CatID__3F466844" Association="Self.FK__Products__CatID__3F466844">
+    <AssociationSet Name="FK__Products__CatID__4222D4EF" Association="Self.FK__Products__CatID__4222D4EF">
       <End Role="Category" EntitySet="Categories" />
       <End Role="Products" EntitySet="Products" />
     </AssociationSet>
-    <AssociationSet Name="FK__Orders__CusID__38996AB5" Association="Self.FK__Orders__CusID__38996AB5">
+    <AssociationSet Name="FK__Orders__CusID__412EB0B6" Association="Self.FK__Orders__CusID__412EB0B6">
       <End Role="Customers" EntitySet="Customers" />
       <End Role="Orders" EntitySet="Orders" />
     </AssociationSet>
-    <AssociationSet Name="FK__OderDetai__Order__4222D4EF" Association="Self.FK__OderDetai__Order__4222D4EF">
+    <AssociationSet Name="FK__OderDetai__Order__3F466844" Association="Self.FK__OderDetai__Order__3F466844">
       <End Role="Orders" EntitySet="Orders" />
       <End Role="OderDetails" EntitySet="OderDetails" />
     </AssociationSet>
-    <AssociationSet Name="FK__OderDetai__ProID__4316F928" Association="Self.FK__OderDetai__ProID__4316F928">
+    <AssociationSet Name="FK__OderDetai__ProID__403A8C7D" Association="Self.FK__OderDetai__ProID__403A8C7D">
       <End Role="Products" EntitySet="Products" />
       <End Role="OderDetails" EntitySet="OderDetails" />
     </AssociationSet>
-    <AssociationSet Name="FK__Products__SupID__403A8C7D" Association="Self.FK__Products__SupID__403A8C7D">
+    <AssociationSet Name="FK__Products__SupID__4316F928" Association="Self.FK__Products__SupID__4316F928">
       <End Role="Suppliers" EntitySet="Suppliers" />
       <End Role="Products" EntitySet="Products" />
     </AssociationSet>

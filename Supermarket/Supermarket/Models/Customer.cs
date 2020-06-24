@@ -22,7 +22,7 @@ namespace Supermarket.Models
     
         public string CusID { get; set; }
         public string Address { get; set; }
-        public int PhoneNo { get; set; }
+        public string PhoneNo { get; set; }
         public string CusName { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

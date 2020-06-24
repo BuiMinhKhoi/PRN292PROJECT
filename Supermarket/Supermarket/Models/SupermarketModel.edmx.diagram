@@ -4,18 +4,18 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="f6a56614a24f4726b4a2d58621866458" Name="Diagram1">
+      <Diagram DiagramId="df067ec76a3e4e5993b44d751ca98c0f" Name="Diagram1">
         <EntityTypeShape EntityType="SupermarketModel.Category" Width="1.5" PointX="0.75" PointY="1.875" IsExpanded="true" />
         <EntityTypeShape EntityType="SupermarketModel.Customer" Width="1.5" PointX="0.75" PointY="9.75" IsExpanded="true" />
         <EntityTypeShape EntityType="SupermarketModel.Order" Width="1.5" PointX="3" PointY="9.375" IsExpanded="true" />
         <EntityTypeShape EntityType="SupermarketModel.Product" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="SupermarketModel.Supplier" Width="1.5" PointX="0.75" PointY="5.75" IsExpanded="true" />
         <EntityTypeShape EntityType="SupermarketModel.OderDetail" Width="1.5" PointX="5.25" PointY="1.625" IsExpanded="true" />
-        <AssociationConnector Association="SupermarketModel.FK__Products__CatID__3F466844" ManuallyRouted="false" />
-        <AssociationConnector Association="SupermarketModel.FK__Orders__CusID__38996AB5" ManuallyRouted="false" />
-        <AssociationConnector Association="SupermarketModel.FK__OderDetai__Order__4222D4EF" ManuallyRouted="false" />
-        <AssociationConnector Association="SupermarketModel.FK__OderDetai__ProID__4316F928" ManuallyRouted="false" />
-        <AssociationConnector Association="SupermarketModel.FK__Products__SupID__403A8C7D" ManuallyRouted="false" />
+        <AssociationConnector Association="SupermarketModel.FK__Products__CatID__4222D4EF" ManuallyRouted="false" />
+        <AssociationConnector Association="SupermarketModel.FK__Orders__CusID__412EB0B6" ManuallyRouted="false" />
+        <AssociationConnector Association="SupermarketModel.FK__OderDetai__Order__3F466844" ManuallyRouted="false" />
+        <AssociationConnector Association="SupermarketModel.FK__OderDetai__ProID__403A8C7D" ManuallyRouted="false" />
+        <AssociationConnector Association="SupermarketModel.FK__Products__SupID__4316F928" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

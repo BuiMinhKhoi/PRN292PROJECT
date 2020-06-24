@@ -23,9 +23,9 @@ namespace Supermarket.Models
         public string ProID { get; set; }
         public string ProName { get; set; }
         public string QuantityPerUnit { get; set; }
-        public double UnitPrice { get; set; }
-        public int UnitInStock { get; set; }
-        public int UnitOnOrder { get; set; }
+        public Nullable<double> UnitPrice { get; set; }
+        public Nullable<int> UnitInStock { get; set; }
+        public Nullable<int> UnitOnOrder { get; set; }
         public string Status { get; set; }
         public string Image { get; set; }
         public string CatID { get; set; }
