@@ -1,2 +1,0 @@
-# PRN292PROJECT
-Supermarket
